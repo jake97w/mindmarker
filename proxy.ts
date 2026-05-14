@@ -1,12 +1,9 @@
-import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { clerkMiddleware } from "@clerk/nextjs/server";
 
-const isProtectedRoute = createRouteMatcher(["/dashboard(.*)"]);
-
-export default clerkMiddleware(async (auth, req) => {
-  if (isProtectedRoute(req)) {
-    await auth.protect();
-  }
-});
+// Clerk middleware still runs so ClerkProvider can initialize, but no routes
+// are gated — /dashboard is publicly accessible so visitors can try the tool
+// without creating an account.
+export default clerkMiddleware();
 
 export const config = {
   matcher: [
