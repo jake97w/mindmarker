@@ -21,8 +21,24 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: 'QuietMind — Find clarity in a noisy world',
-  description: 'A gentle place to journal your thoughts, process your feelings, and feel a little less alone.',
+  metadataBase: new URL('https://mindmarker.app'),
+  title: "MindMarker — Alzheimer's Educational Tool",
+  description:
+    'An educational tool that analyzes language samples for early indicators of cognitive change. Built for learners, families, and clinicians.',
+  openGraph: {
+    title: "MindMarker — Alzheimer's Educational Tool",
+    description:
+      'An educational tool that analyzes language samples for early indicators of cognitive change.',
+    url: 'https://mindmarker.app',
+    siteName: 'MindMarker',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "MindMarker — Alzheimer's Educational Tool",
+    description:
+      'An educational tool that analyzes language samples for early indicators of cognitive change.',
+  },
 }
 
 export default function RootLayout({
