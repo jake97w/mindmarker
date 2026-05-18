@@ -60,7 +60,7 @@ export default async function DashboardPage() {
             Paste any text sample to receive a cognitive language report.
           </p>
           <Link
-            href="/"
+            href="/analyze"
             className="inline-block bg-white text-indigo-700 font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-indigo-50 transition-colors"
           >
             Go to analyser →
